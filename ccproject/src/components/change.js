@@ -92,6 +92,7 @@ export default function change() {
               type="submit"
               fullWidth
               variant="contained"
+              href="/"
               sx={{ mt: 3, mb: 2 }}>
                 Back To Home
               </Button>

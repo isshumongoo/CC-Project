@@ -12,11 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-
-
 const theme = createTheme();
-
-export default function SignIn() {
+export default function Home() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -25,7 +22,6 @@ export default function SignIn() {
       password: data.get('password'),
     });
   };
-
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
@@ -38,65 +34,61 @@ export default function SignIn() {
             alignItems: 'center',
           }}
         >
-          <Avatar
-            alt="Remy Sharp"
-            src="logo2_copy.png"
-            /*sx={{ width: 24, height: 24 }}*/
-/>
-          <Typography component="h1" variant="h5">
-            Login
-          </Typography>
+          <Typography component="h1" variant="h5">Home</Typography>
+          <Avatar sx={{ m: 1, bgcolor: 'primary.main' }}>
+            <LockOutlinedIcon />
+          </Avatar>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
-              margin="normal"
-              required
+            <Button
+              type="submit"
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              autoFocus
-            />
-            <TextField
-              margin="normal"
-              required
+              variant="outlined"
+              href="/Map"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Map
+            </Button>
+            <Button
+              type="submit"
               fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+              variant="outlined"
+              href="/Account"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Account
+            </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="outlined"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Settings
+            </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="outlined"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Help
+            </Button>
+            <Button
+              type="submit"
+              fullWidth
+              variant="outlined"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              About
+            </Button>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
             >
-              Login
+              Log Out
             </Button>
-            <Grid container>
-              <Grid item xs>
-                <Button href="#" variant="outlined">
-                  Forgot password?
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button href="#" variant="outlined">
-                  {"Don't have an account? Sign Up"}
-                </Button>
-              </Grid>
-
-              <Grid item>
-                <Button variant='outlined' size='small' alignItems='center' href='#'>
-                  continue as guest
-                </Button>
-              </Grid>
-            </Grid>
           </Box>
         </Box>
       </Container>

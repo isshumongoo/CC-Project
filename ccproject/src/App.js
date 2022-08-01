@@ -7,8 +7,9 @@ import AccountPage from './components/AccountPage';
 import Privacy from './components/Privacy';
 import Login from './components/Login';
 import Map from './components/Map';
-import Tester from './components/Tester'
-import {Routes, Route} from 'react-router-dom'
+import Tester from './components/Tester';
+import Home from './components/Home';
+import {Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
       //82C341 is hex code for darker CC green */}
       
       {/* <Tester/> */}
-      <Map/>
-      {/* <Routes>
-        <Route path='/' element={<Map/>}/>
+     
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='Map' element={<Map/>}/>
         <Route path='Login' element={<Login/>}/>
         <Route path='Account' element={<AccountPage/>}/>
         <Route path='Registration' element={<Registration/>}/>
@@ -29,7 +31,7 @@ function App() {
         <Route path='Forgot' element={<Forgot/>}/>
         <Route path='Change' element={<Change/>}/>
         <Route path='Privacy' element={<Privacy/>}/>
-      </Routes> */}
+      </Routes>
       
     </div>
   );

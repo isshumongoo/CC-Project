@@ -12,11 +12,11 @@ class MapContainer extends Component {
   render() {
     return(
       <>
-      <Header title="Christiana Care" sections={sections} />
+      <Header title="Care Differently" sections={sections} />
       <Map
         google = {this.props.google}
         style = {{width:"60%", height:"100%",}}
-        zoom = {50}
+        zoom = {100}
         initialCenter = {
           {
           lat: 39.750613,
