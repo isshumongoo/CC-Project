@@ -6,36 +6,17 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Paper from '@mui/material/Paper';
-import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
+import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 
+const theme = createTheme();
 
-function Copyright(props) {
-
-}
-
-const theme = createTheme({
-  status: {
-    danger: '#e53e3e',
-  },
-  palette: {
-    primary: {
-      main: '#0971f1',
-      darker: '#053e85',
-    },
-    neutral: {
-      main: '#64748B',
-      contrastText: '#fff',
-    },
-  },
-});
-
-export default function SignInSide() {
+export default function SignIn() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -47,94 +28,79 @@ export default function SignInSide() {
 
   return (
     <ThemeProvider theme={theme}>
-      <Grid container component="main" sx={{ height: '100vh' }}>
+      <Container component="main" maxWidth="xs">
         <CssBaseline />
-        <Grid
-          item
-          xs={false}
-          sm={4}
-          md={7}
+        <Box
           sx={{
-            backgroundImage: 'url(https://media.bizj.us/view/img/12194098/christiana-hospital-1*750xx3451-1941-20-0.jpg)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            marginTop: 8,
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
-        />
-        <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
-          <Box
-            sx={{
-              my: 8,
-              mx: 4,
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'center',
-            }}
-          >
-            <Avatar
-              alt="CCLogo"
-              src="careLogo.png.png"
-              variant='square'
-              sx={{ width: 300, height: 57 }}
+        >
+          <Avatar
+            alt="Remy Sharp"
+            src="logo2_copy.png"
+            /*sx={{ width: 24, height: 24 }}*/
 />
-            <Typography component="h1" variant="h5" fontWeight="Bold" color='#82C341'>
-              Login
-            </Typography>
-            <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 1 }}>
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                id="Username/Email"
-                label="Username/Email"
-                name="Username/Email"
-                autoComplete="Username/Email"
-                autoFocus
-              />
-              <TextField
-                margin="normal"
-                required
-                fullWidth
-                name="password"
-                label="Password"
-                type="password"
-                id="password"
-                autoComplete="current-password"
-              />
-              <FormControlLabel
-                control={<Checkbox value="remember" color='primary' />}
-                label="Remember me"
-              />
-              
-              <Button 
-              variant="contained" 
-              color="success"
+          <Typography component="h1" variant="h5">
+            Login
+          </Typography>
+          <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+            <TextField
+              margin="normal"
+              required
               fullWidth
-              disableElevation
-                href='/'
-              >  
-                Login
-              </Button>
-
-              <Grid container>
-                <Grid item xs>
-                  <Link href="/Forgot" variant="body2">
-                    Forgot password?
-                  </Link>
-                </Grid>
-                <Grid item>
-                  <Link href="/Registration" variant="body2">
-                    {"Register"}
-                  </Link>
-                </Grid>
+              id="email"
+              label="Email Address"
+              name="email"
+              autoComplete="email"
+              autoFocus
+            />
+            <TextField
+              margin="normal"
+              required
+              fullWidth
+              name="password"
+              label="Password"
+              type="password"
+              id="password"
+              autoComplete="current-password"
+            />
+            <FormControlLabel
+              control={<Checkbox value="remember" color="primary" />}
+              label="Remember me"
+            />
+            <Button
+              type="submit"
+              fullWidth
+              variant="contained"
+              href="/Map"
+              sx={{ mt: 3, mb: 2 }}
+            >
+              Login
+            </Button>
+            <Grid container>
+              <Grid item xs>
+                <Button href="/Forgot" variant="outlined">
+                  Forgot password?
+                </Button>
               </Grid>
-              <Copyright sx={{ mt: 5 }} />
-            </Box>
+              <Grid item>
+                <Button href="/Register" variant="outlined">
+                  {"Don't have an account? Sign Up"}
+                </Button>
+              </Grid>
+
+              <Grid item>
+                <Button variant='outlined' size='small' alignItems='center' href='/Map'>
+                  continue as guest
+                </Button>
+              </Grid>
+            </Grid>
           </Box>
-        </Grid>
-      </Grid>
+        </Box>
+      </Container>
     </ThemeProvider>
   );
 }
