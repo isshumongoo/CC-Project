@@ -40,10 +40,10 @@ export default function SignIn() {
         >
           <Avatar
             alt="Remy Sharp"
-            src="logo2_copy.png"
+            src="CDLogo.png"
             /*sx={{ width: 24, height: 24 }}*/
 />
-          <Typography component="h1" variant="h5">
+          <Typography component="h1" variant="h5" color="#62A2FF">
             Login
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -87,7 +87,7 @@ export default function SignIn() {
                 </Button>
               </Grid>
               <Grid item>
-                <Button href="/Register" variant="outlined">
+                <Button href="/Registration" variant="outlined">
                   {"Don't have an account? Sign Up"}
                 </Button>
               </Grid>

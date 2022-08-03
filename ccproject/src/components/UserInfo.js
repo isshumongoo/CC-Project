@@ -52,12 +52,12 @@ export default function SignUp() {
 <Box
         component="img"
         sx={{
-          height: 50,
-          width: 250,
+          height: 175,
+          width: 175,
           mb: 1,
         }}
         alt="Christiana Care Logo"
-        src="https://i.ibb.co/fSPDwqF/christianacarelogo.png"
+        src="CDLogo.png"
       />
 
           <Avatar sx={{ m: 2, bgcolor: 'secondary.main', width: 180, height: 180}}>

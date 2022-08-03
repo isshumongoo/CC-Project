@@ -61,6 +61,7 @@ export default function Home() {
               type="submit"
               fullWidth
               variant="outlined"
+              href="/Settings"
               sx={{ mt: 3, mb: 2 }}
             >
               Settings
@@ -86,8 +87,9 @@ export default function Home() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
+              href="/Login"
             >
-              Log Out
+              Log In
             </Button>
           </Box>
         </Box>

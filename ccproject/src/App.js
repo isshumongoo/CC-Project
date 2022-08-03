@@ -9,6 +9,7 @@ import Login from './components/Login';
 import Map from './components/Map';
 import Tester from './components/Tester';
 import Home from './components/Home';
+import Settings from './components/Settings'
 import {Routes, Route} from 'react-router-dom';
 
 function App() {
@@ -19,7 +20,8 @@ function App() {
       //BBDD99 is hex code for CC green
       //82C341 is hex code for darker CC green */}
       
-      {/* <Tester/> */}
+      {/* <Tester/>
+      <Settings/> */}
      
       <Routes>
         <Route path='/' element={<Home/>}/>
@@ -31,6 +33,7 @@ function App() {
         <Route path='Forgot' element={<Forgot/>}/>
         <Route path='Change' element={<Change/>}/>
         <Route path='Privacy' element={<Privacy/>}/>
+        <Route path='Settings' element={<Settings/>}/>
       </Routes>
       
     </div>
