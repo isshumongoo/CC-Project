@@ -143,7 +143,7 @@ function Map() {
         borderRadius='lg'
         m={4}
         // bgColor='#62A2FF'
-        bgColor='white'
+        bgColor='#bbdaa4'
         shadow='base'
         minW='container.md'
         zIndex='1'
@@ -165,7 +165,7 @@ function Map() {
           </Box>
 
           <ButtonGroup>
-            <Button colorScheme='pink' type='submit' onClick={calculateRoute}>
+            <Button backgroundColor='#59981A' type='submit' onClick={calculateRoute}>
               Calculate Route
             </Button>
             <IconButton
