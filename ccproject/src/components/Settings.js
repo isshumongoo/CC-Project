@@ -90,7 +90,7 @@ export default function Settings() {
               type="submit"
               halfWidth
               variant="contained"
-              href="/AccountPage"
+              href="/Account"
               sx={{ mt: 2, mb: 2 }}
             >
 
