@@ -165,7 +165,7 @@ function Map() {
           </Box>
 
           <ButtonGroup>
-            <Button backgroundColor='#59981A' type='submit' onClick={calculateRoute}>
+            <Button backgroundColor='#81B622' type='submit' onClick={calculateRoute}>
               Calculate Route
             </Button>
             <IconButton

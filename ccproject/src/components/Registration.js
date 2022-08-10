@@ -21,7 +21,7 @@ export default function Register() {
   return (
     
     <ThemeProvider theme={theme}>
-            <img src = "careLogo.png.png" alt="Christiana Care Logo" width="200"/>
+            <img src = "CDLogo.png" alt="Christiana Care Logo" width="150"/>
             <p class="top">Patient</p>
       <Container component="main" maxWidth="xs">
         <CssBaseline />
